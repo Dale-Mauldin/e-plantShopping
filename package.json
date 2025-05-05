@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite build; vite preview --host"
+    "preview": "vite build; vite preview --host",
+    "predeploy": "npm run build",  // <- This builds your project before deploying
+    "deploy": "gh-pages -d dist"  // <- This deploys the dist folder to GitHub Pages
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
