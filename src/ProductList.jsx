@@ -11,12 +11,10 @@ function ProductList({ onHomeClick }) {
     const totalQuantity = useSelector(state => state.cart.totalQuantity);
     const [isDisabled, setIsDisabled] = useState(false);
 
-/* 111111  */ 
     const cartItems = useSelector(state => state.cart.items);
     const alreadyInCart = (itemName) => {
         return cartItems.some((item) => item.name === itemName);
     }
-/*2222*/
 
     const handleAddToCart = (product) => {
         dispatch(addItem(product));
